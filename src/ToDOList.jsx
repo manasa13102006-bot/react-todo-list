@@ -4,13 +4,7 @@ import "./ToDoList.css";
 export default function ToDoList(){
     let[todos,setTodos]=useState([{task:"sampleState" ,id:uuidv4(),isdone:false}]);
     let[newtodo,setNewtodo]=useState("");
-    // let addNewTask=()=>{
-    //     setTodos((prevTodo)=>{
-    //         return [...todos,{task:newtodo,id:uuidv4(),isdone:false}];
-    //     });
-    //     setNewtodo("");
-
-    // };
+  
     let addNewTask = () => {
     if (newtodo.trim() === "") return;
 
@@ -24,9 +18,7 @@ export default function ToDoList(){
       let updateToDoValue= (event)=>{
         setNewtodo(event.target.value);
     };
-    // let deleteTodo=(id)=>{
-    //    setTodos((prevTodos)=>todos.filter((prevTodos)=>prevTodos.id!==id));
-    // };
+   
     let deleteTodo = (id) => {
     setTodos((prevTodos) =>
         prevTodos.filter((todo) => todo.id !== id)
