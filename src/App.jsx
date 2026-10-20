@@ -1,5 +1,4 @@
 import './App.css'
-import LudoBoard from './LudoBoard'
 import ToDoList from './ToDOList'
 
 function App() {
